@@ -4,7 +4,7 @@ node {
          checkout scm
      }
      stage('Build image') {
-         app = docker.build("onesenal/CCCR_Project_01")
+         app = docker.build("onesenal/CCCR_Project_01/Project/website")
      }
      stage('Push image') {
          docker.withRegistry('https://registry.hub.docker.com', 'docker-hub') {
